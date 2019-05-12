@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "372923912646",
+    "firebase_url": "https://expoandroid-f89af.firebaseio.com",
+    "project_id": "expoandroid-f89af",
+    "storage_bucket": "expoandroid-f89af.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:372923912646:android:48d955b0a5b30c32",
+        "android_client_info": {
+          "package_name": "com.example.expoandroid3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "372923912646-gehe7ua8u65iah6f61lfeaf7ub3gdcpu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCu0LeiaOkfl9Raw2Gw5GhjnDx6U643Y_o"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "372923912646-gehe7ua8u65iah6f61lfeaf7ub3gdcpu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
