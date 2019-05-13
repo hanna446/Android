@@ -4,14 +4,17 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.net.Uri;
+import android.support.annotation.NonNull;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
@@ -67,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         switch (requestCode){
-
             case GALERY_CODE:
                 if (resultCode == RESULT_OK){
                     Uri uri = data.getData();
@@ -83,9 +85,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case CAMERA_CODE:
                 if (resultCode == RESULT_OK){
-                    Bitmap bitmap = (Bitmap)data.getExtras().get("data");
-                    image.setImageBitmap(bitmap);
-                    Uri uri = data.getData();
+                    Uri uriPhoto = (Uri)data.getExtras().get("data");
+                    image.setImageURI(uriPhoto);
+
+                   /* Uri uri = data.getData();
                     StorageReference filePath = myStorage.child("fotos_camera").child(uri.getLastPathSegment());
                     filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
@@ -93,7 +96,7 @@ public class MainActivity extends AppCompatActivity {
                             Toast.makeText(MainActivity.this, "Foto subida correctamente", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
                 }
                 break;
 
