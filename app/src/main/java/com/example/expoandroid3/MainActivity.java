@@ -87,16 +87,16 @@ public class MainActivity extends AppCompatActivity {
                 if (resultCode == RESULT_OK){
                     Uri uriPhoto = (Uri)data.getExtras().get("data");
                     image.setImageURI(uriPhoto);
-
-                   /* Uri uri = data.getData();
-                    StorageReference filePath = myStorage.child("fotos_camera").child(uri.getLastPathSegment());
-                    filePath.putFile(uri).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    Picasso.get().load(uriPhoto).into(image);
+                   /*Uri uri = data.getData();*/
+                    StorageReference filePath = myStorage.child("fotos_camera").child(uriPhoto.getLastPathSegment());
+                    filePath.putFile(uriPhoto).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Toast.makeText(MainActivity.this, "Foto subida correctamente", Toast.LENGTH_LONG).show();
 
                         }
-                    });*/
+                    });
                 }
                 break;
 
