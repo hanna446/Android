@@ -15,34 +15,13 @@
       },
       "oauth_client": [
         {
-          "client_id": "378382165447-p936j0i2f0cdk5p7c1ch494aete6v1ao.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyAgrcsAHIInsL8YcI2Uf-8f_bQg7mYVLlc"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "378382165447-p936j0i2f0cdk5p7c1ch494aete6v1ao.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:378382165447:android:6bd6e8671a920a1c",
-        "android_client_info": {
-          "package_name": "com.example.uploadstorage"
-        }
-      },
-      "oauth_client": [
+          "client_id": "378382165447-ndvrkb7o062sdmcspne0rn7f1qn287hc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.expoandroid3",
+            "certificate_hash": "3dd3986d32c8c0a44f74861bf3291c7a812df394"
+          }
+        },
         {
           "client_id": "378382165447-p936j0i2f0cdk5p7c1ch494aete6v1ao.apps.googleusercontent.com",
           "client_type": 3
