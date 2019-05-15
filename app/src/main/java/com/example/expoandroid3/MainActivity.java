@@ -1,6 +1,6 @@
 package com.example.expoandroid3;
 
-import android.content.ContentResolver;
+import      android.content.ContentResolver;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -127,18 +127,20 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case CAMERA_CODE:
                 if (resultCode == RESULT_OK) {
-                    Uri uriPhoto = (Uri) data.getExtras().get("data");
-                    image.setImageURI(uriPhoto);
-                    Picasso.get().load(uriPhoto).into(image);
+                    Bitmap uriPhoto = (Bitmap) data.getExtras().get("data");
+
+                    image.setImageBitmap(uriPhoto);
+                    //Picasso.get().load(uriPhoto).into(image);
+
                     /*Uri uri = data.getData();*/
-                    StorageReference filePath = myStorage.child("fotos_camera").child(uriPhoto.getLastPathSegment());
+                 /*   StorageReference filePath = myStorage.child("fotos_camera").child(uriPhoto.getLastPathSegment());
                     filePath.putFile(uriPhoto).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
                         @Override
                         public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
                             Toast.makeText(MainActivity.this, "Foto subida correctamente", Toast.LENGTH_LONG).show();
 
                         }
-                    });
+                    });*/
                 }
                 break;
 
